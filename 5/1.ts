@@ -2,7 +2,7 @@ const { readFileSync } = require('fs')
 
 const stackInput = readFileSync('./stacks.txt', 'utf-8').split('\n')
 const instructionInput = readFileSync('./input.txt', 'utf-8').split('\n')
-// let stacks: string[][] = [['N', 'Z'], ['D', 'C', 'M'], ['P']]
+
 let stacks: string[][] = [
     ['T', 'Z', 'B'],
     ['N', 'D', 'T', 'H', 'V'],
@@ -27,7 +27,6 @@ const executeInstruction = (values: number[]): void => {
     const from: number = values[1] - 1
     const to: number = values[2] - 1
     const newStack: string[] = []
-    move = Math.min(move, stacks[from].length)
 
     for (let i = 0; i < move; i++) {
         newStack.unshift(stacks[from].shift() || '#')
