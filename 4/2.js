@@ -8,8 +8,9 @@ const solve = () => {
         const [elf1_tasks, elf2_tasks] = tasks.split(',')
         const [elf1_low, elf1_high] = elf1_tasks.split('-').map((num) => +num)
         const [elf2_low, elf2_high] = elf2_tasks.split('-').map((num) => +num)
+
         for (let i = elf1_low; i <= elf1_high; i++) {
-            if (!visited[i]) {
+            if (visited[i]) {
                 visited[i] = 1
                 continue
             }

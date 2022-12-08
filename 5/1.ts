@@ -1,6 +1,5 @@
 const { readFileSync } = require('fs')
 
-const stackInput = readFileSync('./stacks.txt', 'utf-8').split('\n')
 const instructionInput = readFileSync('./input.txt', 'utf-8').split('\n')
 
 let stacks: string[][] = [

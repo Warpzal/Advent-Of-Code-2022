@@ -26,7 +26,7 @@ for (const line of lines) {
     }
     const size: number = +words[0]
     path.forEach((dir, index) => {
-        const key = path.slice(0, index + 1).join('.')
+        const key = path.slice(0, index + 1).join('/')
         if (!sizes[key]) sizes[key] = 0
         sizes[key] += size
     })

@@ -1,21 +1,6 @@
 const fs = require('fs')
 const input = fs.readFileSync('./input.txt', 'utf-8').split('\n')
 
-const getOption = (char) => {
-    switch (char) {
-        case 'A':
-        case 'X':
-            return 'Rock'
-        case 'B':
-        case 'Y':
-            return 'Paper'
-        case 'C':
-        case 'Z':
-            return 'Scissors'
-    }
-    return 'Failure'
-}
-
 const getOutcome = (opponentChoice, myChoice) => {
     switch (myChoice) {
         case 'Rock':
